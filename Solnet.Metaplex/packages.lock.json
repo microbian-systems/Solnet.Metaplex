@@ -42,58 +42,6 @@
         "resolved": "13.0.3",
         "contentHash": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ=="
       },
-      "Solnet.Extensions": {
-        "type": "Direct",
-        "requested": "[6.1.0, )",
-        "resolved": "6.1.0",
-        "contentHash": "jTs3CNeA1/FSdDBMDy/MfrTx8Z3pBc9qMRFDC2lgkW8SwHfL9LG0tso/BYsckEKXPpODUxe08xCrCWtLg/Hw1Q==",
-        "dependencies": {
-          "Solnet.Programs": "6.1.0",
-          "Solnet.Rpc": "6.1.0",
-          "Solnet.Wallet": "6.1.0"
-        }
-      },
-      "Solnet.KeyStore": {
-        "type": "Direct",
-        "requested": "[6.1.0, )",
-        "resolved": "6.1.0",
-        "contentHash": "CkFUXyWLahJh5KeRLNd2BqEFaeosGNhsPmmrZY9yUM92H/4hvNnw84J1RWIbw5nfsczNMp8iYf4l265+sZcKTA==",
-        "dependencies": {
-          "Chaos.NaCl.Standard": "1.0.0",
-          "Portable.BouncyCastle": "1.9.0",
-          "Solnet.Wallet": "6.1.0"
-        }
-      },
-      "Solnet.Programs": {
-        "type": "Direct",
-        "requested": "[6.1.0, )",
-        "resolved": "6.1.0",
-        "contentHash": "q48c+KUaA+wpa/Fi3Q+tKiDwNIRlYEilwJcqOqVFqO8bC6nn2EYQRVxs8myEjBblsm+t2B5aCSS7Py+HAl9pEA==",
-        "dependencies": {
-          "Solnet.Rpc": "6.1.0"
-        }
-      },
-      "Solnet.Rpc": {
-        "type": "Direct",
-        "requested": "[6.1.0, )",
-        "resolved": "6.1.0",
-        "contentHash": "vTAT+WlWgamnRbfRBbV018aWiDXeXDCr7iBTOqIEpiZ4in2IfXC+K4upIPvL3H0KOSpApjVWm3mbuN4kao5IVQ==",
-        "dependencies": {
-          "Microsoft.Extensions.Logging": "6.0.0",
-          "Microsoft.Extensions.Logging.Console": "6.0.0",
-          "Solnet.Wallet": "6.1.0"
-        }
-      },
-      "Solnet.Wallet": {
-        "type": "Direct",
-        "requested": "[6.1.0, )",
-        "resolved": "6.1.0",
-        "contentHash": "qAacwo1RegP36lMqs5wIuvF5FIKUS3KWqbg0NfQMALwtAK040wDePRjxBmP/ovvx+UkWTx6FXRlSq0yXaKiolA==",
-        "dependencies": {
-          "Chaos.NaCl.Standard": "1.0.0",
-          "Portable.BouncyCastle": "1.9.0"
-        }
-      },
       "Chaos.NaCl.Standard": {
         "type": "Transitive",
         "resolved": "1.0.0",
@@ -194,6 +142,35 @@
         "contentHash": "OdrZO2WjkiEG6ajEFRABTRCi/wuXQPxeV6g8xvUJqdxMvvuCCEk86zPla8UiIQJz3durtUEbNyY/3lIhS0yZvQ==",
         "dependencies": {
           "System.Text.Encodings.Web": "8.0.0"
+        }
+      },
+      "ThrowGuard": {
+        "type": "Transitive",
+        "resolved": "1.0.6",
+        "contentHash": "HlTP2J3yDrar8CUCetZl9tJ9RFd79/Cj/20tIQAm/IfvtNVpvKDLdFy6cw72FiBz0uRZZe3w56AlJkZ5PSURWw=="
+      },
+      "solnet.programs": {
+        "type": "Project",
+        "dependencies": {
+          "Solnet.Rpc": "[6.1.0, )",
+          "ThrowGuard": "[1.0.6, )"
+        }
+      },
+      "solnet.rpc": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "[8.0.0, )",
+          "Microsoft.Extensions.Logging.Console": "[8.0.0, )",
+          "Solnet.Wallet": "[6.1.0, )",
+          "ThrowGuard": "[1.0.6, )"
+        }
+      },
+      "solnet.wallet": {
+        "type": "Project",
+        "dependencies": {
+          "Chaos.NaCl.Standard": "[1.0.0, )",
+          "Portable.BouncyCastle": "[1.9.0, )",
+          "ThrowGuard": "[1.0.6, )"
         }
       }
     }

@@ -1,5 +1,6 @@
 using Solnet.Metaplex.Utilities;
 using Solnet.Programs;
+using Solnet.Programs.Models;
 using Solnet.Programs.Utilities;
 using Solnet.Rpc.Builders;
 using Solnet.Rpc.Models;
