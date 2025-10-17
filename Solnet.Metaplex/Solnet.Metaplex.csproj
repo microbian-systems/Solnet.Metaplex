@@ -1,34 +1,26 @@
-﻿
-<Project Sdk="Microsoft.NET.Sdk">
-
-    <PropertyGroup>
-        <Description>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>
             Solnet.Metaplex implements functionality to integrate Metaplex project into .Net applications.
         </Description>
-        <TargetFramework>net6.0</TargetFramework>
-
-        <IsPackable>true</IsPackable>
-
-        <RootNamespace>Solnet.Metaplex</RootNamespace>
-    </PropertyGroup>
-
-    <ItemGroup>
-        <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
-            <_Parameter1>Solnet.Metaplex.Test</_Parameter1>
-        </AssemblyAttribute>
-    </ItemGroup>
-
-    <ItemGroup>
-        <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.10" />
-        <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="6.0.0" />
-        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.10" />
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-        <PackageReference Include="Solnet.Extensions" Version="6.1.0" />
-        <PackageReference Include="Solnet.Keystore" Version="6.1.0" />
-        <PackageReference Include="Solnet.Programs" Version="6.1.0" />
-        <PackageReference Include="Solnet.Rpc" Version="6.1.0" />
-        <PackageReference Include="Solnet.Wallet" Version="6.1.0" />
-    </ItemGroup>
-
-    <Import Project="..\SharedBuildProperties.props" />
+    <TargetFramework>net9.0</TargetFramework>
+    <IsPackable>true</IsPackable>
+    <RootNamespace>Solnet.Metaplex</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>Solnet.Metaplex.Test</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.10" />
+    <PackageReference Include="Solnet.Extensions" Version="6.1.0" />
+    <PackageReference Include="Solnet.Keystore" Version="6.1.0" />
+    <PackageReference Include="Solnet.Programs" Version="6.1.0" />
+    <PackageReference Include="Solnet.Rpc" Version="6.1.0" />
+    <PackageReference Include="Solnet.Wallet" Version="6.1.0" />
+  </ItemGroup>
+  <Import Project="..\SharedBuildProperties.props" />
 </Project>

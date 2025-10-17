@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+
 using Solnet.Metaplex.Utilities;
 using Solnet.Metaplex.Utilities.Json;
 using Solnet.Programs.Utilities;
@@ -11,6 +11,7 @@ using System.Diagnostics;
 using System.Net.Http;
 using System.Numerics;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Solnet.Metaplex.NFT.Library
@@ -72,7 +73,7 @@ namespace Solnet.Metaplex.NFT.Library
                 using var httpClient = new HttpClient();
                 httpClient.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0");
                 var offsiteTokenRetrieval = httpClient.GetStringAsync(new Uri(URI)).Result;
-                _Metadata = JsonConvert.DeserializeObject<MetaplexTokenStandard>(offsiteTokenRetrieval);
+                _Metadata = JsonSerializer.Deserialize<MetaplexTokenStandard>(offsiteTokenRetrieval);
             }
             catch (Exception ex)
             {
