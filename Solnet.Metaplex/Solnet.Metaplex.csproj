@@ -3,7 +3,7 @@
     <Description>
             Solnet.Metaplex implements functionality to integrate Metaplex project into .Net applications.
         </Description>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <IsPackable>true</IsPackable>
     <RootNamespace>Solnet.Metaplex</RootNamespace>
   </PropertyGroup>

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "dependencies": {
-    "net9.0": {
+    "net10.0": {
       "Solnet.Programs": {
         "type": "Direct",
         "requested": "[6.1.0, )",
